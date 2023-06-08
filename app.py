@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 from flask import Flask,render_template,request
 import replicate,os
 app=Flask(__name__)
@@ -21,9 +15,6 @@ def index():
         return(render_template("index.html",result="waiting"))
 if __name__ == "__main__":
     app.run()
-
-
-# In[ ]:
 
 
 
