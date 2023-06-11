@@ -7,14 +7,14 @@ version=model.versions.get("436b051ebd8f68d23e83d22de5e198e0995357afef113768c20f
 @app.route("/",methods=["GET","POST"])
 def index():
     if request.method == "POST":
-        t = request.form.get("txt")
-        inputs = {'prompt': t}
-        output = version.predict(**inputs)
+        t=request.form.get("txt")
+        inputs={'prompt': t}
+        output=version.predict(**inputs)
         return(render_template("index.html",result=output))
     else:
         return(render_template("index.html",result="waiting"))
 if __name__ == "__main__":
-    app.run()
+    app.run()
 
 
 
